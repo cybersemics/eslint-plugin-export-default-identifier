@@ -1,3 +1,6 @@
 {
-  "docPath": "docs/rules/{name}.md"
+  "docPath": "README.md",
+  "rulePath": "src/rules/{name}.ts",
+  "testPath": "src/rules/{name}.test.ts",
+  "fixCodeExamples": false
 }

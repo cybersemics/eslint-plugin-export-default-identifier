@@ -9,7 +9,7 @@ const tester = new RuleTester({
   }
 })
 
-tester.run('no-export-default-literal', rule, {
+tester.run('export-default-identifier', rule, {
   valid: [
     {
       code: `const myExport = {}

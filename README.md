@@ -1,31 +1,22 @@
-# ESLint plugin tutorial
+# export-default-identifier
 
-## What's this?
-This is an example repository to explain how to create your ESLint rules.
+`export default` must export an identifier for TypeDocs.
 
-## Why should we learn how to create custom ESLint rules?
-Lint rules help to keep our codes' quality constant. Automatic code checking brings time for more productive activities, and also eliminates indivisual effects from code review.
+## Rule details
 
-Creating ESLint rules is a good subject to learn AST(Abstract Syntax Tree) analysis. Today, analysis of AST is the foundation of the JavaScript build ecosystem. There are many libraries using AST, such as Babel plugins, custom TypeScript transformers, prettier, webpack and so on. Your team's JavaScript gets improved significantly if you can control AST freely!
-## Tutorial
+❌ Examples of **incorrect** code:
+```js
+export default {}
+```
 
-[See guides](./guide/README.md).
+✔️ Examples of **correct** code:
+```js
 
-## Getting started
-This repository is also designed to work as a project template for custom ESLint rules.
+const myExport = {}
+export default myExport
+```
 
-If you want to start quickly, follow the procedure below:
+## Resources
 
-* Clone this repository
-* Remove `.git` and `guide` dirs
-* Change pkg name via edit `package.json`
-* Change and test rule codes under `src/rules` dir
-
-This repository includes:
-
-* TypeScript setting
-* Jest
-* CircleCI configuration
-
-## LICENSE
-MIT
+* [Rule source](/src/rules/export-default-identifier.ts)
+* [Test source](/src/rules/export-default-identifier.test.ts)

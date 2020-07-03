@@ -47,7 +47,7 @@
     "eslint": "^4.0.0 || ^5.0.0"
   },
   "scripts": {
-    "clean": "rimraf lib",
+    "clean": "rimraf lib docs",
     "build": "tsc",
     "test": "jest",
     "docs": "DOCGEN=1 jest",

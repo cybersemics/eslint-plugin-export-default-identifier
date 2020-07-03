@@ -1,7 +1,7 @@
-import noExportDefaultLiteral from "./rules/no-export-default-literal"
+import exportDefaultIdentifier from "./rules/export-default-identifier"
 
 export = {
   rules: {
-    "no-export-default-literal": noExportDefaultLiteral
+    "export-default-identifier": exportDefaultIdentifier
   },
 }
