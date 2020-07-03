@@ -1,0 +1,54 @@
+{
+  "name": "eslint-plugin-export-default-identifier",
+  "version": "0.0.0",
+  "description": "Always export identifier for export default.",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "test": "jest",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "files": [
+    "README.md",
+    "package.json",
+    "lib"
+  ],
+  "keywords": [
+    "eslint",
+    "typescript",
+    "example"
+  ],
+  "author": "Raine Revere",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/eslint": "^4.16.6",
+    "@types/node": "^11.10.4",
+    "@typescript-eslint/parser": "^1.4.2",
+    "eslint": "^5.15.0",
+    "jest": "^23.6.0",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^23.10.4",
+    "typescript": "~3.4.0"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "eslint": "^4.0.0 || ^5.0.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "(src/.*\\.test)\\.ts$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "\\.d\\.ts$",
+      "lib/.*"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json"
+    ]
+  }
+}
