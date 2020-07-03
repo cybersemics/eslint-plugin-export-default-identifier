@@ -51,6 +51,6 @@
     "build": "tsc",
     "test": "jest",
     "docs": "DOCGEN=1 jest",
-    "prepublish": "npm run clean && npm run build"
+    "prepare": "npm run clean && npm run build"
   }
 }
