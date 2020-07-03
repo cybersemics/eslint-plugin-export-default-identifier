@@ -7,6 +7,7 @@
 ❌ Examples of **incorrect** code:
 ```js
 export default {}
+export default function test() {}
 ```
 
 ✔️ Examples of **correct** code:
@@ -14,6 +15,20 @@ export default {}
 
 const myExport = {}
 export default myExport
+```
+
+❌ Examples of **incorrect** code with `[{"types":["Identifier","FunctionDeclaration"]}]` options:
+```js
+export default {}
+```
+
+✔️ Examples of **correct** code with `[{"types":["Identifier","FunctionDeclaration"]}]` options:
+```js
+
+const myExport = {}
+export default myExport
+
+export default function test() {}
 ```
 
 ## Resources

@@ -1,5 +1,5 @@
 {
-  "docPath": "README.md",
+  "docPath": "{name}/../README.md",
   "rulePath": "src/rules/{name}.ts",
   "testPath": "src/rules/{name}.test.ts",
   "fixCodeExamples": false

@@ -1,6 +1,10 @@
 import { Rule } from 'eslint'
 import { ExportDefaultDeclaration, Node } from 'estree'
 
+interface Options {
+  types?: string[]
+}
+
 const rule: Rule.RuleModule = {
 
   meta: {
@@ -18,8 +22,15 @@ const rule: Rule.RuleModule = {
       // build fails if node is not coerced (?)
       const declaration = (node as ExportDefaultDeclaration).declaration
 
-      // fail if export default is not an Identifier
-      if (declaration && declaration.type !== 'Identifier') {
+      // get allowable types
+      // default to Identifier
+      const options = {
+        types: ["Identifier"],
+        ...context.options[0]
+      }
+
+      // fail if export default is not an allowed node type
+      if (declaration && !options.types.includes(declaration.type)) {
         context.report({
           message: `Cannot export ${declaration.type}. Must export identifier as default export for TypeDocs.`,
           node,
