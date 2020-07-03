@@ -1,4 +1,4 @@
-import { RuleTester } from 'eslint'
+import { RuleTester } from 'eslint-docgen'
 
 import rule from './export-default-identifier'
 
