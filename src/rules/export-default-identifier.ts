@@ -6,7 +6,7 @@ const rule: Rule.RuleModule = {
   meta: {
     docs: {
       description: '`export default` must export an identifier for TypeDocs.',
-      url: 'https://github.com/raineorshine/eslint-plugin-export-default-identifier',
+      url: 'https://github.com/cybersemics/eslint-plugin-export-default-identifier',
     }
   },
 
