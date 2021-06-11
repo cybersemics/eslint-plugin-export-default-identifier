@@ -2,7 +2,7 @@
   "author": "Raine Revere",
   "name": "eslint-plugin-export-default-identifier",
   "description": "eslint plugin to ensure that export default must export an identifier.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "lib/index.js",
   "files": [
     "README.md",
