@@ -32,25 +32,25 @@
   ],
   "license": "ISC",
   "devDependencies": {
-    "@types/eslint": "^4.16.6",
-    "@types/node": "^11.10.4",
-    "@typescript-eslint/parser": "^1.4.2",
-    "eslint": "^5.15.0",
-    "eslint-docgen": "^0.4.3",
-    "jest": "^23.6.0",
-    "rimraf": "^2.6.3",
-    "ts-jest": "^23.10.4",
-    "typescript": "~3.4.0"
+    "@types/eslint": "^7.2.13",
+    "@types/node": "^15.12.2",
+    "@typescript-eslint/parser": "^4.26.1",
+    "eslint": "^7.28.0",
+    "eslint-docgen": "^0.4.5",
+    "jest": "^27.0.4",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.3",
+    "typescript": "~4.3.2"
   },
   "dependencies": {},
   "peerDependencies": {
-    "eslint": "^4.0.0 || ^5.0.0"
+    "eslint": ">=7"
   },
   "scripts": {
     "clean": "rimraf lib docs",
     "build": "tsc",
     "test": "jest",
     "docs": "DOCGEN=1 jest",
-    "prepare": "npm run clean && npm run build"
+    "prepare": "npm run clean && npm run build && npm run docs"
   }
 }
